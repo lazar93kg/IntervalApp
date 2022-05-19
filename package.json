@@ -1,0 +1,32 @@
+{
+  "name": "intervalapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel public/index.html --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lazar93kg/IntervalApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lazar93kg/IntervalApp/issues"
+  },
+  "homepage": "https://github.com/lazar93kg/IntervalApp#readme",
+  "devDependencies": {
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.4",
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.51.0",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}
