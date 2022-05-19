@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+$black-color: black;
+
+
+* {
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: $black-color;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  background-color: gray;
+  color: $black-color;
+}
+
+.temp-screens {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  .screen {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+}
+
+.screen-wrapper {
+  position: relative;
+}
+
+.menu-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 0px;
+  width: 100%;
+  overflow: hidden;
+
+  &.opened {
+    height: unset;
+  }
+  
+  .menu {
+    margin-top: 10%;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+
+    .menu-option {
+      margin-bottom: 1.5em;
+      cursor: pointer;
+    }
+  }
+}
+
+.screen {
+  position: relative;
+  margin: 0px;
+  background-color: white;
+  color: $black-color;
+  width: 360px;
+  width: 100vw;
+  height: 800px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  header {
+    position: relative;
+    align-self: stretch;
+    margin: 1rem;
+    height: 2rem;
+    text-align: center;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    font-size: 1.1rem;
+
+    .hamburger {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+  }
+
+  .main {
+    position: relative;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  &.screen-set-timer {
+    .main {
+      padding-top: 120px;
+    }
+  }
+
+  footer {
+    position: relative;
+    align-self: center;
+    padding-bottom: 40px;
+  }
+
+  .btn {
+    display: block;
+    width: 160px;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border: 1px solid $black-color;
+    cursor: pointer;
+
+    &.btn-big {
+      width: 260px;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+  }
+
+  &.dark-theme {
+    background-image: radial-gradient(circle at 50%, #383838, #383838 18%, #303030 18%, #303030 27%, #2A2A2A 27%, #2A2A2A 40%, #262626 40%, #262626 60%, #222222 60%, #222222 100%);
+    background-position: center;
+    color: white;
+
+    &.bg-black {
+      background: $black-color;
+    }
+
+    .btn {
+      border: 1px solid white;
+    }
+  }
+}
+
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: nowrap;
+
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+
+  .line {
+    background-color: $black-color;
+  }
+
+  .line-1 {
+    height: 33%;
+  }
+
+  .line-2 {
+    height: 25%;
+  }
+
+  .line-3 {
+    height: 12%;
+  }
+
+  .line-4 {
+    height: 7%;
+  }
+}
+
+.dark-theme {
+  .hamburger {
+    .line {
+      background-color: white;
+    }
+  }
+}
+
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  cursor: pointer;
+
+  .hamburger {
+    transform: rotate(90deg);
+  }
+
+  .logo-title {
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+  }
+
+  p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-top: 0.4rem;
+  }
+}
+
+.icon {
+  font-size: 40px;
+}
+
+.icon.icon-alarm {
+  font-size: 4rem;
+}
+
+.icon.icon-break {
+  font-size: 2.7rem;
+}
+
+h2 {
+  margin-top: 0.5em;
+  font-size: 1.9rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+
+  margin-top: 2rem;
+  font-size: 1.2rem;
+
+  div {
+    margin-bottom: 1rem;
+
+    input {
+      margin-right: 1rem;
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+  }
+}
+
+.widget-digital-timer {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.screen-digital-timer {
+  .widget-digital-timer {
+    font-size: 4rem;
+    font-weight: 600;
+  }
+}
+
+.widget-analog-timer {
+  position: relative;
+
+  .box {
+    position: relative;
+    width: 240px;
+    height: 240px;
+
+    .line-holder {
+      position: absolute;
+      top: 0px;
+      left: 118px;
+      width: 4px;
+      height: 240px;
+      transition: none;
+
+      .line {
+        position: absolute;
+        top: 0px;
+        left: 1px;
+        width: 2px;
+        height: 10px;
+        background-color: $black-color;
+      }
+
+      .pointer-seconds {
+        position: absolute;
+        top: 12px;
+        left: 1px;
+        width: 2px;
+        height: 108px;
+        background-color: $black-color;
+        transition: all 0s;
+      }
+
+      .pointer-minutes {
+        position: absolute;
+        top: 25px;
+        left: 0px;
+        width: 4px;
+        height: 95px;
+        background-color: $black-color;
+      }
+    }
+  }
+}
+
+.set-minutes-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  .btn-plus-minus {
+    font-size: 3rem;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  .minutes {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-size: 5rem;
+    font-weight: 600;
+  }
+}

@@ -11,6 +11,7 @@
         "dom.iterable"
       ],
       /* Specify JSX code generation */
+      "jsx": "react-jsx",
       "jsx": "react",
       /* Generate corresponding .map files */
       "sourceMap": true,
