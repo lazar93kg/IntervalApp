@@ -24,5 +24,3 @@ The Timer App is a feature-rich web application designed to provide a versatile 
 Lazar Jevtic
 ### UI Mockup
 NBI/Handelsakademin
-
-
